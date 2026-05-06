@@ -1,0 +1,17 @@
+{
+  "repo": "notion-net-dns-gate",
+  "thresholds": {
+    "signal": 2,
+    "slack": 2,
+    "confidence": 1,
+    "drag": 5,
+    "ship": 189,
+    "watch": 117
+  },
+  "terms": [
+    "packet span",
+    "retry pressure",
+    "route drift",
+    "socket risk"
+  ]
+}

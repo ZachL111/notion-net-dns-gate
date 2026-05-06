@@ -1,0 +1,73 @@
+{
+  "repo": "notion-net-dns-gate",
+  "language": "TypeScript",
+  "category": "Networking",
+  "goal": "Design a TypeScript verification harness for dns systems, covering graph analysis, node-edge fixtures, and failure-oriented tests.",
+  "review_model": {
+    "terms": [
+      "packet span",
+      "retry pressure",
+      "route drift",
+      "socket risk"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "packet span",
+      "signal": 44,
+      "slack": 53,
+      "drag": 29,
+      "confidence": 89,
+      "score": 143,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "retry pressure",
+      "signal": 48,
+      "slack": 37,
+      "drag": 22,
+      "confidence": 56,
+      "score": 123,
+      "lane": "watch"
+    },
+    {
+      "name": "edge",
+      "focus": "route drift",
+      "signal": 77,
+      "slack": 27,
+      "drag": 23,
+      "confidence": 60,
+      "score": 172,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "socket risk",
+      "signal": 73,
+      "slack": 51,
+      "drag": 24,
+      "confidence": 73,
+      "score": 198,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "packet span",
+      "signal": 65,
+      "slack": 46,
+      "drag": 8,
+      "confidence": 77,
+      "score": 229,
+      "lane": "ship"
+    }
+  ]
+}
